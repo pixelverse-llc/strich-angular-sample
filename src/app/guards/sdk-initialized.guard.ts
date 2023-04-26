@@ -2,7 +2,7 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
-import { StrichSDK } from '@pixelverse/strichjs-sdk';
+import { ScannerService } from "../services/scanner.service";
 
 /**
  * Prevent entry to a page that requires the SDK to be initialized.
@@ -12,11 +12,12 @@ import { StrichSDK } from '@pixelverse/strichjs-sdk';
 })
 export class SdkInitializedGuard implements CanActivate {
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private scanner: ScannerService) {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (StrichSDK.isInitialized()) {
+    if (this.scanner.sdkInitialized.value) {
       return true;
     } else {
       console.log(`Attempt to access a route that requires an initialized SDK: going home`);
