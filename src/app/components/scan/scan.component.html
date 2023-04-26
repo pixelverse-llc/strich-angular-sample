@@ -1,0 +1,25 @@
+<div class="app-wrapper">
+
+  <div class="scan-header">
+    Continuously scan codes
+  </div>
+
+  <div class="barcode-reader">
+    <!-- STRICH BarcodeReader instantiated here -->
+  </div>
+
+  <div class="scan-results">
+
+    <div class="scan-detection" *ngIf="codeDetection" (click)="dismissDetection()">
+      <div class="type-name">
+        {{ codeDetection.typeName }}
+      </div>
+      <div class="data">{{ codeDetection.data }}</div>
+    </div>
+
+    <div class="scan-button-bar">
+      <button class="btn-primary" (click)="finishScanning()">FINISH</button>
+      <button class="btn-primary" (click)="goToSingleScanning()">SWITCH TO SINGLE</button>
+    </div>
+  </div>
+</div>

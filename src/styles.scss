@@ -6,6 +6,24 @@
   --color-dark: #222222;
 }
 
+.scan-header {
+  display: flex;
+  height: 48px;
+  min-height: 48px;
+  flex-direction: row;
+  padding-left: var(--padding-default);
+  padding-right: var(--padding-default);
+  align-items: center;
+}
+
+.scan-button-bar {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
 // CSS Reset, credits: https://www.joshwcomeau.com/css/custom-css-reset/
 
 /*

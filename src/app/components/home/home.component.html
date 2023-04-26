@@ -1,0 +1,20 @@
+<main>
+  <header>
+    <h2>STRICH Angular sample code</h2>
+  </header>
+  <section>
+    <p>SDK initialized: {{ sdkInitialized }}</p>
+    <p *ngIf="errorMessage"><strong [innerHTML]="errorMessage"></strong></p>
+  </section>
+  <section>
+    <p *ngIf="scanner.lastCodeDetection | async; let lastDetection">
+      Last detected code: <strong>{{ lastDetection.data }}</strong>
+    </p>
+  </section>
+  <section>
+    <ul>
+      <li><a routerLink="/scan">Continuous Scanning</a></li>
+      <li><a routerLink="/scan-single">Single Scan</a></li>
+    </ul>
+  </section>
+</main>
