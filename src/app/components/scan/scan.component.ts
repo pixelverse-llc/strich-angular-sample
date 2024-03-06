@@ -1,11 +1,15 @@
 import { AfterViewInit, Component, NgZone, OnDestroy } from '@angular/core';
-import { BarcodeReader, CodeDetection, Configuration, SdkError } from "@pixelverse/strichjs-sdk";
+import { CommonModule } from "@angular/common";
 import { Router } from "@angular/router";
+
+import { BarcodeReader, CodeDetection, SdkError } from "@pixelverse/strichjs-sdk";
 
 import { ScannerService } from "../../services/scanner.service";
 
 @Component({
   selector: 'app-scan',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './scan.component.html',
   styleUrls: ['./scan.component.scss']
 })
@@ -25,8 +29,10 @@ export class ScanComponent implements AfterViewInit, OnDestroy {
     // BarcodeReader initialization in AfterViewInit (ensures that host element is present and layouted)
     try {
       const barcodeReader = new BarcodeReader(this.scanner.configuration);
+      console.debug(`> BarcodeReader.initialize()`);
       barcodeReader.initialize()
         .then(result => {
+          console.debug(`< BarcodeReader.initialize()`);
           this.barcodeReader = result;
 
           // register detection hook, run it in the Angular zone so change detection works
@@ -59,7 +65,12 @@ export class ScanComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     // release BarcodeReader, freeing up camera
-    this.barcodeReader?.destroy();
+    if (this.barcodeReader) {
+      console.debug(`> BarcodeReader.destroy()`);
+      this.barcodeReader.destroy().then(() => {
+        console.debug(`< BarcodeReader.destroy()`);
+      });
+    }
   }
 
   dismissDetection() {

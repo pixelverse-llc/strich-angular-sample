@@ -17,7 +17,8 @@ export class ScannerService {
       // services should only be initialized once, but we handle this case anyway
       this.sdkInitialized.next(true);
     } else {
-      StrichSDK.initialize(environment.licenseKey).then(() => {
+      const licenseKey = '<your license key>';
+      StrichSDK.initialize(licenseKey).then(() => {
         console.log(`STRICH SDK initialized successfully`);
         this.sdkInitialized.next(true);
       }).catch(err => {
@@ -34,10 +35,7 @@ export class ScannerService {
       selector: '.barcode-reader',
       engine: {
         symbologies: ['code128'],
-        numScanlines: 10,
-        minScanlinesNeeded: 3,
-        invertedCodes: true,
-        duplicateInterval: 750
+        duplicateInterval: 1500
       },
       locator: {
         regionOfInterest: {
