@@ -1,4 +1,4 @@
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
@@ -10,7 +10,7 @@ import { ScannerService } from "../services/scanner.service";
 @Injectable({
   providedIn: 'root',
 })
-export class SdkInitializedGuard implements CanActivate {
+export class SdkInitializedGuard  {
 
   constructor(private router: Router,
               private scanner: ScannerService) {
