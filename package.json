@@ -1,6 +1,7 @@
 {
   "name": "strich-angular-sample",
   "description": "Sample code for integrating STRICH into an Angular application",
+  "homepage": "https://docs.strich.io/sample-code.html",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
