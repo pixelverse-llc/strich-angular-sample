@@ -1,0 +1,17 @@
+<main class="app-wrapper">
+  <header class="top-bar">
+    <h3>Repeated Scans</h3>
+    <button (click)="finishScanning()">EXIT</button>
+  </header>
+  <app-strich-scanner></app-strich-scanner>
+</main>
+
+<dialog #confirmScanDialog>
+  <p>You have scanned {{ codesScanned }} barcodes.</p>
+  <p>Scanned code: <b>{{ data }}</b></p>
+
+  <div class="button-bar">
+    <button (click)="continueScanning()">CONTINUE</button>
+    <button (click)="finishScanning()">FINISH</button>
+  </div>
+</dialog>

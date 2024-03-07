@@ -1,0 +1,13 @@
+<main class="app-wrapper">
+  <header class="top-bar">
+    <h3>Multiple Scans</h3>
+    <button (click)="finishScanning()">EXIT</button>
+  </header>
+  <app-strich-scanner></app-strich-scanner>
+  <section class="barcode-grid">
+    <div class="code1">{{ scannedCodes[0] }}</div>
+    <div class="code2">{{ scannedCodes[1] }}</div>
+    <div class="code3">{{ scannedCodes[2] }}</div>
+    <div class="code4">{{ scannedCodes[3] }}</div>
+  </section>
+</main>

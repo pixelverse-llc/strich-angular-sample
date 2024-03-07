@@ -1,0 +1,18 @@
+.app-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  app-strich-scanner {
+    flex-grow: 1;
+  }
+}
+
+dialog {
+  margin: auto;
+  .button-bar {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+}

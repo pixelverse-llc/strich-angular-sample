@@ -1,0 +1,17 @@
+.app-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  app-strich-scanner {
+    flex-grow: 1;
+  }
+
+  .barcode-grid {
+    display: grid;
+    padding: 8px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
