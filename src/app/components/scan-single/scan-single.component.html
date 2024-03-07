@@ -1,18 +1,8 @@
-<div class="app-wrapper">
+<main class="app-wrapper">
+  <header class="top-bar">
+    <h3>Single Barcode Scan</h3>
+    <button (click)="finishScanning()">EXIT</button>
+  </header>
 
-  <div class="scan-header">
-    Single scan
-  </div>
-
-  <div class="barcode-reader">
-    <!-- STRICH BarcodeReader instantiated here -->
-  </div>
-
-  <div class="scan-results">
-    <div class="scan-button-bar">
-      <div class="scan-actions">
-        <button class="btn-primary" (click)="done()">CANCEL</button>
-      </div>
-    </div>
-  </div>
-</div>
+  <app-strich-scanner class="strich-scanner"></app-strich-scanner>
+</main>

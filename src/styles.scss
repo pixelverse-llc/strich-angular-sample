@@ -6,24 +6,6 @@
   --color-dark: #222222;
 }
 
-.scan-header {
-  display: flex;
-  height: 48px;
-  min-height: 48px;
-  flex-direction: row;
-  padding-left: var(--padding-default);
-  padding-right: var(--padding-default);
-  align-items: center;
-}
-
-.scan-button-bar {
-  display: flex;
-  gap: 10px;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
 // CSS Reset, credits: https://www.joshwcomeau.com/css/custom-css-reset/
 
 /*
@@ -77,4 +59,18 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+// Own styles
+
+body {
+  font-family: sans-serif;
+}
+
+header.top-bar {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
