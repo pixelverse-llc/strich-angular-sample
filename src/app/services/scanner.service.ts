@@ -87,18 +87,6 @@ export class ScannerService {
           // use a narrow region of interest, appropriate for 1D barcodes and full-screen reader
           left: 0.05, right: 0.05, top: 0.4, bottom: 0.4
         }
-      },
-      frameSource: {
-        resolution: 'full-hd' // full-hd is recommended for more challenging codes
-      },
-      overlay: {
-        showCameraSelector: true,
-        showFlashlight: true,
-        showDetections: true
-      },
-      feedback: {
-        audio: true,
-        vibration: true
       }
     };
   }
