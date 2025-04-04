@@ -5,11 +5,10 @@ import { RouterLink } from "@angular/router";
 import { ScannerService } from "../../services/scanner.service";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    imports: [CommonModule, RouterLink],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
 

@@ -7,11 +7,10 @@ import { StrichScannerComponent } from "../strich-scanner/strich-scanner.compone
 import { Subscription } from "rxjs";
 
 @Component({
-  selector: 'app-scan-single',
-  standalone: true,
-  imports: [CommonModule, StrichScannerComponent],
-  templateUrl: './scan-single.component.html',
-  styleUrls: ['./scan-single.component.scss']
+    selector: 'app-scan-single',
+    imports: [CommonModule, StrichScannerComponent],
+    templateUrl: './scan-single.component.html',
+    styleUrls: ['./scan-single.component.scss']
 })
 export class ScanSingleComponent implements OnInit, OnDestroy {
 
