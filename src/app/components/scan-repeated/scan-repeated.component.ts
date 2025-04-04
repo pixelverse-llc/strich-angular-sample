@@ -5,13 +5,12 @@ import { ScannerService } from "../../services/scanner.service";
 import { Subscription } from "rxjs";
 
 @Component({
-  selector: 'app-scan-repeated',
-  standalone: true,
-  imports: [
-    StrichScannerComponent
-  ],
-  templateUrl: './scan-repeated.component.html',
-  styleUrl: './scan-repeated.component.scss'
+    selector: 'app-scan-repeated',
+    imports: [
+        StrichScannerComponent
+    ],
+    templateUrl: './scan-repeated.component.html',
+    styleUrl: './scan-repeated.component.scss'
 })
 export class ScanRepeatedComponent implements OnInit, OnDestroy {
 

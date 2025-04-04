@@ -6,13 +6,12 @@ import { ScannerService } from "../../services/scanner.service";
 import { Subscription } from "rxjs";
 
 @Component({
-  selector: 'app-scan-multiple',
-  standalone: true,
-  imports: [
-    StrichScannerComponent
-  ],
-  templateUrl: './scan-multiple.component.html',
-  styleUrl: './scan-multiple.component.scss'
+    selector: 'app-scan-multiple',
+    imports: [
+        StrichScannerComponent
+    ],
+    templateUrl: './scan-multiple.component.html',
+    styleUrl: './scan-multiple.component.scss'
 })
 export class ScanMultipleComponent implements OnInit, OnDestroy {
 
