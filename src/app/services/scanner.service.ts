@@ -79,14 +79,8 @@ export class ScannerService {
     return {
       selector: hostElement.nativeElement,
       engine: {
-        symbologies: ['code128'],
+        symbologies: ['code128', 'qr'],
         duplicateInterval: 1500
-      },
-      locator: {
-        regionOfInterest: {
-          // use a narrow region of interest, appropriate for 1D barcodes and full-screen reader
-          left: 0.05, right: 0.05, top: 0.4, bottom: 0.4
-        }
       }
     };
   }

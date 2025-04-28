@@ -1,8 +1,13 @@
 <main>
   <header><h2>STRICH Angular Sample</h2></header>
   <p>
-    Note: Only <b>Code 128</b> symbology is enabled.
+    Note: Only <b>Code 128 and QR</b> symbologies are enabled.
   </p>
+  <section>
+    <header><h3>Popup Scanner</h3></header>
+    <p>Scan a single code using the PopupScanner.</p>
+    <a routerLink="" (click)="scanWithPopup()">Scan with Popup</a>
+  </section>
   <section>
     <header><h3>Single Scan</h3></header>
     <p>Scan a single barcode and return here.</p>
@@ -19,3 +24,13 @@
     <a routerLink="/scan-multiple">Start Multiple</a>
   </section>
 </main>
+
+<!-- dialog for displaying popup scanner result -->
+<dialog #popupScannerResultDialog>
+  <p *ngIf="popupScannerResult">Scanned code: <b>{{ popupScannerResult.data }}</b></p>
+
+  <div class="button-bar">
+    <button (click)="scanWithPopup()">SCAN AGAIN</button>
+    <button (click)="popupScanDone()">DONE</button>
+  </div>
+</dialog>
