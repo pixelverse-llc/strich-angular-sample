@@ -1,12 +1,14 @@
 <main>
   <header><h2>STRICH Angular Sample</h2></header>
   <p>
-    Note: Only <b>Code 128 and QR</b> symbologies are enabled.
+    Note: Only <b>Code 128 and QR</b> symbologies are enabled. Check the
+    <a href="https://docs.strich.io/supported-symbologies.html" target="_blank">documentation</a>
+    for a full list of supported symbologies.
   </p>
   <section>
     <header><h3>Popup Scanner</h3></header>
     <p>Scan a single code using the PopupScanner.</p>
-    <a routerLink="" (click)="scanWithPopup()">Scan with Popup</a>
+    <button (click)="scanWithPopup()">Scan with Popup</button>
   </section>
   <section>
     <header><h3>Single Scan</h3></header>
