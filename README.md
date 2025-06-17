@@ -5,8 +5,12 @@ You need a valid license key to run this sample. To get started with STRICH SDK,
 
 More on integrating our SDK into Angular apps can be found in the [Angular Integration Guide](https://docs.strich.io/angular-integration-guide.html).
 
-The project was created using the following Angular CLI invocation:
+To run the project, install the dependencies and then run the development server:
 
 ```shell
-ng new strich-angular-sample --routing=true --ssr=false --standalone=true --style scss
+npm install
+npm run start
 ```
+
+The app will be available on http://localhost:4200.
+To test with a smartphone, have a look at our [documentation](https://docs.strich.io/getting-started.html#testing-on-a-smartphone) for options.
