@@ -22,4 +22,4 @@ There is a [PDF test sheet](test-sheet.pdf) included in this repository for test
 
 You are likely developing a smartphone app, and since the development server is only available on localhost, you will have trouble connecting to it.
 
-We recommend using tools like [Ngrok](https://ngrok.com) that expose your local development server on a public address that you can easily access via your smartphone, see our section [Testing on a Smartphone](https://docs.strich.io/getting-started.html#testing-on-a-smartphone).
+We recommend using tools like [Ngrok](https://ngrok.com) that expose your local development server on a public address that you can access from your smartphone, see our section [Testing on a Smartphone](https://docs.strich.io/getting-started.html#testing-on-a-smartphone).
